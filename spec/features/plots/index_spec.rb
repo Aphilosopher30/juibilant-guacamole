@@ -47,7 +47,7 @@ RSpec.describe 'plots index page' do
 
       apple_q1 = PlotPlant.create!(plant: apple, plot: plot_q1  )
       apple_e2 = PlotPlant.create!(plant: apple, plot: plot_q2  )
-      apple_e1 = PlotPlant.create!(plant: apple, plot: plot_e2  )
+      apple_e1 = PlotPlant.create!(plant: apple, plot: plot_e1  )
 
       orange_q2 = PlotPlant.create!(plant: orange , plot: plot_q2)
       orange_e1 = PlotPlant.create!(plant: orange , plot: plot_e1)
