@@ -91,12 +91,6 @@ RSpec.describe 'plots index page' do
     end
   end
 
-
-
-
-
-
-
   describe 'remove plants from garden' do
     it "lists link to remove next to each plant" do
       q_gardens = Garden.create!(name: "Q gardens", organic: false)
@@ -113,7 +107,7 @@ RSpec.describe 'plots index page' do
 
       orange_q1 = PlotPlant.create!(plant: orange , plot: plot_q1)
       orange_e1 = PlotPlant.create!(plant: orange , plot: plot_e1)
-           
+
       visit "/plots"
 
       within "#plot-#{plot_q1.id}" do
@@ -199,6 +193,4 @@ RSpec.describe 'plots index page' do
       end
     end
   end
-
-
 end
