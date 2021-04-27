@@ -8,7 +8,7 @@ RSpec.describe 'garden show page' do
     visit "/gardens/#{eden.id}"
 
     expect(page).to have_content(eden.name)
-    expect(page).to have_content("oganic: #{eden.organic}")
+    expect(page).to have_content("organic: #{eden.organic}")
 
   end
 
@@ -98,14 +98,13 @@ RSpec.describe 'garden show page' do
 
       life_e2 = PlotPlant.create!(plant: life , plot: plot_e2)
 
+      visit "/gardens/#{eden.id}"
+
       expect(page).to have_content(orange.name)
       expect(page).to have_content(pair.name)
       expect(page).to have_no_content(life.name)
       expect(page).to have_no_content(apple.name)
     end
   end
-
-
-
 
 end
